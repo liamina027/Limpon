@@ -1,0 +1,184 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7581a1;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.nav {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6e7ea9;
+    text-transform: uppercase;
+}
+
+.btn-free {
+    font-weight: 400;
+    color: #fff;
+    background-color: #1085e4;
+}
+
+.grid h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #192b59;
+}
+
+.grid h2 span {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1085e4;
+    text-transform: uppercase;
+    display: block;
+}
+
+.grid-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.grid-item a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1085e4;
+}
+
+.grid-text span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #192b59;
+}
+
+.grid-text p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1085e4;
+}
+
+.page-subscribe {
+    background-color: #0a2090;
+}
+
+.page-subscribe h2 span {
+    font-size: 14px;
+    font-weight: 800;
+    color: #00bffe;
+    text-transform: uppercase;
+    display: block;
+}
+
+.page-subscribe h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.page-subscribe p {
+   color: #dfe8ff;
+}
+
+.page-software h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.page-software dt {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5a6789;
+}
+
+.page-stat h2 span {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1085e4;
+    text-transform: uppercase;
+    display: block;
+}
+
+.page-stat h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.page-stat li span {
+    font-size: 60px;
+    font-weight: 700;
+    color: #bacbdc;
+    text-transform: uppercase;
+    display: block;
+}
+
+.page-stat li {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1085e4;
+}
+
+.page-app h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.page-app p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 700;
+    color: #c4d2dd;
+    text-transform: uppercase;
+}
+
+.page-analytics h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.page-analytics a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #1085e4;
+}
+
+.page-analytics2 h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #192b59;
+}
+
+.page-analytics2  a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #1085e4;
+}
+
+.page-screen h2 span {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1085e4;
+    text-transform: uppercase;
+    display: block;
+}
+
+.page-screen h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #192b59;
+}
