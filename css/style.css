@@ -20,12 +20,64 @@ h1 {
     font-weight: 700;
     color: #6e7ea9;
     text-transform: uppercase;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0;
+}
+
+.btn-group a + a {
+    margin-left: 15px;
+}
+
+.btn-primary {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; 
+    letter-spacing: 2.5px;
+    background-color: #1085e4;
+    border: 1px solid #1085e4;
+    border-radius: 30px;  
+    padding: 20px 40px;
+}
+
+.btn-primary:hover {
+    color: #1085e4;
+    background-color: #fff;
+}
+
+.btn-secondary {
+    font-size: 12px;
+    font-weight: 700;
+    color: #7e8bae;
+    text-transform: uppercase; 
+    letter-spacing: 2.5px;
+    background-color: #cbdbe8;
+    border: 1px solid #cbdbe8;
+    border-radius: 30px;
+    padding: 20px 40px;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
 }
 
 .btn-free {
     font-weight: 400;
-    color: #fff;
-    background-color: #1085e4;
+    padding: 22px 56px;
+    letter-spacing: 1.7px;
+}
+
+.btn-info {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8085b1;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    background-color: transparent;
+    border: 1px solid #dce1e5;
+    border-radius: 30px;
+    padding: 20px 40px;
 }
 
 .grid h2 {
@@ -195,7 +247,7 @@ h1 {
     font-size: 40px;
     font-weight: 600;
     color: #fff;
-    background-color:  #1085e4;
+    background-color: #1085e4;
 }
 
 .page-clients p {
@@ -283,16 +335,3 @@ h1 {
     color: #fff;
     background-color: #192b59;
 }
-
-.box-price  a {
-    font-size: 12px;
-    font-weight: 700;
-    color: #8085b1;
-    text-transform: uppercase;
-}
-
-.box-price .active a {
-    color: #fff;
-    background-color: #192b59;
-}
-
