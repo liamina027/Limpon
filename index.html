@@ -27,9 +27,9 @@
 <body>
     <!--Блок 1-->
     <div class = "page-header"><!--Фон для всего блока-->
-        <div class = "wrap"><!--Сделать навигацию и логотип в одну строку-->
-            <a href=""></a><!--Логотип-->
-            <ul class = "nav"><!--Навигация-->
+        <div class = "wrap box-header"><!--Сделать навигацию и логотип в одну строку-->
+            <a href="" class = "logo"></a>
+            <ul class = "nav">
                 <li><a href="" class="nav-item">Home</a></li>
                 <li><a href="" class="nav-item">Features</a></li>
                 <li><a href="" class="nav-item">Video</a></li>
@@ -46,15 +46,16 @@
                 <a href="" class = "btn-secondary">learn more</a>
             </div>
         </div> 
+        <div class="screen-img"></div>
     </div>
     
     <!--Блок 2-->
     <div class = "page-company"><!--Фон для блока-->
-        <ul><!--Спонсоры-->
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ul class="list-company"><!--Спонсоры-->
+            <li class="list-company-item company-one"></li>
+            <li class="list-company-item company-two"></li>
+            <li class="list-company-item company-three"></li>
+            <li class="list-company-item company-four"></li>
         </ul>
     </div>
 
@@ -113,12 +114,14 @@
 
     <!--Блок 4-->
     <div class = "page-subscribe"><!--Фон-->
-        <div class = "wrap"><!--Контейнер-->
-            <div><!--Левый столбец-->
+        <div class = "box-subscribe"><!--Контейнер-->
+            <div class = "info-subscribe"><!--Левый столбец-->
                 <h2 class = "title-50"><span>Subscribe</span> Signup For A Trail</h2>
                 <p>Create your free account now & get 30 days free trail No credit card required</p>
-                <input type="emial" placeholder="Enter your email address">
-                <button type="submit" class = "btn-primary">Subscribe</button>
+                <div class="form-subscribe">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit" class = "btn-primary">Subscribe</button>
+                </div>
             </div>
             <img src="img/robot.png" alt="Robot">
         </div>
