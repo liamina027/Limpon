@@ -63,7 +63,10 @@ h1 {
 .page-stat .title-50 {
     max-width: 500px;
 }
-.page-grid .title-50>span, .page-subscribe .title-50>span {
+.page-grid .title-40 {
+    letter-spacing: -0.3px;
+}
+.page-grid .title-40>span, .page-subscribe .title-50>span {
     font-size: 14px;
 }
 .page-subscribe .title-50>span {
@@ -72,7 +75,7 @@ h1 {
 .page-subscribe .title-50 {
     color: #fff;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .wrap {
@@ -95,6 +98,12 @@ h1 {
 .btn-primary:hover {
     color: #1085e4;
     background-color: transparent;
+}
+.box-subscribe-user .btn-primary {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    padding: 17px 50px;
 }
 .btn-secondary {
     font-size: 12px;
@@ -210,10 +219,59 @@ h1 {
 }
 
 /*PAGE-GRID*/
+.grid {
+    display: grid;
+    grid-template-areas: 
+        "a c d"
+        "b c d"
+        "b f g"
+        "e f g"
+        "e h h";
+    max-width: 1100px;
+    margin: 0 auto;
+    align-content: space-between;
+}
+.grid-title {
+    grid-area: a;
+}
+.grid-item-1 {
+    grid-area: b;
+}
+.grid-item-2 {
+    grid-area: c;
+}
+.grid-item-3 {
+    grid-area: d;
+}
+.grid-item-4 {
+    grid-area: e;
+}
+.grid-item-5 {
+    grid-area: f;
+}
+.grid-item-6 {
+    grid-area: g;
+}
+.grid-text {
+    grid-area: h;
+    margin-left: 49px;
+}
+.grid-item {
+    text-align: center;
+    box-shadow: 0 3px 7px #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+    padding: 67px 21px 51px;
+}
+.grid-item-1, .grid-item-4 {
+    margin-left: 0;
+}
 .grid-item h3 {
     font-size: 20px;
     font-weight: 600;
     color: #192b59;
+    margin-bottom: 18px;
 }
 .grid-item a {
     font-size: 14px;
@@ -230,38 +288,77 @@ h1 {
     font-weight: 400;
     color: #1085e4;
 }
+.grid-icon {
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto 35px;
+}
+.grid-icon-1 {
+    background: url("../img/grid-icon-1.png");
+    width: 79px;
+    height: 82px;
+}
+.grid-icon-2 {
+    background: url("../img/grid-icon-2.png");
+    width: 73px;
+    height: 79px;
+}
+.grid-icon-3 {
+    background: url("../img/grid-icon-3.png");
+    width: 89px;
+    height: 85px;
+}
+.grid-icon-4 {
+    background: url("../img/grid-icon-4.png");
+    width: 102px;
+    height: 92px;
+}
+.grid-icon-5 {
+    background: url("../img/grid-icon-5.png");
+    width: 85px;
+    height: 90px;
+}
+.grid-icon-6 {
+    background: url("../img/grid-icon-6.png");
+    width: 100px;
+    height: 87px;
+}
 
 /*PAGE-SUBSCRIBE*/
 .box-subscribe {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    max-width: 1110px;
-    margin: 0 auto;
 }
-.info-subscribe {
-    flex-basis: 440px;
+.box-subscribe-child {
+    flex-basis: 49%;
 }
-.info-subscribe p {
+.box-subscribe-text {
     font-size: 18px;
     color: #dfe8ff;
+    width: 437px;
 }
-.form-subscribe{
-    border: 1px solid #456dbd;
-    border-radius: 37px;
-    width: 537px;
-    height: 67px;
-    margin-top: 39px;
-    display: flex;
-    justify-content: space-around;
+.box-subscribe-user{
+    position: relative;
 }
-.form-subscribe input[type="email"] {
+.box-subscribe-user input {
+    border: 2px solid #456dbd;
+    border-radius: 45px;
     background-color: transparent;
-    border: none;
     color: #b1c3ee;
     font-size: 14px;
-    padding-left: 10px;
+    padding: 25px 230px 25px 37px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
 }
+.box-subscribe-user input:focus, .box-subscribe-user .btn-primary:focus {
+    outline: none;
+}
+.box-subscribe-user input::-webkit-input-placeholder {color:#b1c3ee;}
+.box-subscribe-user input::-moz-placeholder          {color:#b1c3ee;}
+.box-subscribe-user input:-moz-placeholder           {color:#b1c3ee;}
+.box-subscribe-user input:-ms-input-placeholder      {color:#b1c3ee;}
 
 /*PAGE-SOFTWARE*/
 .page-software dt {
@@ -428,6 +525,9 @@ h1 {
     background-size: cover;
     padding: 106px 0 99px 0;
 }
+.page-grid {
+    padding: 86px 0 107px;
+}
 .page-subscribe {
     background: rgba(10,32,144,1);
     background: -moz-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
@@ -437,7 +537,7 @@ h1 {
     background: -ms-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: linear-gradient(135deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
-    padding: 50px 0 55px 0;
+    padding: 25px 0 28px 0;
 }
 .page-stat, .page-screen {
     background-color: #edf6ff;
