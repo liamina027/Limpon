@@ -55,6 +55,7 @@ h1 {
     font-size: 50px;
     font-weight: 600;
     color: #192b59;
+    line-height: 60px;
 }
 .page-stat .title-50, .page-screen .title-40, .page-plans .title-40 {
     text-align: center;
@@ -77,11 +78,13 @@ h1 {
     margin: 0;
     margin-bottom: 25px;
 }
-.page-software .title-h2 {
+.page-software .title-h2, .page-analytics .title-h2, .page-analytics2 .title-h2 {
     max-width: 599px;
     margin-top: 12px;
     margin-bottom: 26px;
-    line-height: 60px;
+}
+.page-app-content .title-h2 {
+    margin-bottom: 36px;
 }
 
 .wrap {
@@ -369,11 +372,11 @@ h1 {
 .page-software-flex>div {
     flex-basis: 55%;
 }
-.page-software-icon {
+.settings-icon {
     display: block;
     background-image: url("../img/icon.png");
     background-repeat: no-repeat;
-    background-position: -28px 0;
+    background-position: -3px 0;
     width: 116px;
     height: 98px;
 }
@@ -390,9 +393,10 @@ h1 {
 }
 .page-software-list dd {
     margin-left: 0;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     font-size: 14px;
     line-height: 1.8;
+    position: relative;
 }
 .page-software .screen-img {
     display: block;
@@ -403,23 +407,18 @@ h1 {
     left: 0;
     top: 116px;
 }
-.page-software-list::-webkit-scrollbar {
-    background-color: #f3f6ff;
-    border-radius: 10px;
-    width: 5px;
-}
-.page-software-list::-webkit-scrollbar-thumb {
-    background-color: #1085e4;
-    height: 20px;
-    border-radius: 10px;
-}
-.page-software hr {
-    max-width: 500px;
-    margin-bottom: 25px;
-    margin-left: 0;
-    background-color: #f2f2f2;
-    border: none;
+.page-software-list::-webkit-scrollbar {width: 4px; height: 4px;}
+.page-software-list::-webkit-scrollbar-button {background-color: #1085e4;}
+.page-software-list::-webkit-scrollbar-track-piece {background-color: #f3f6ff;}
+.page-software-list::-webkit-scrollbar-thumb {height: 50px; background-color: #1085e4; border-radius: 10px;}
+.page-software-list dd::after{
+    content: "";
+    position: absolute;
+    width: 500px;
     height: 1px;
+    bottom: -25px;
+    left: 0;
+    background-color: #f2f2f2;
 }
 
 /*PAGE-STAT*/
@@ -446,29 +445,72 @@ h1 {
 }
 
 /*PAGE-APP*/
-.page-app p:nth-of-type(2) {
+.page-app-content{
+    width: 55%;
+}
+.page-app-text {
     font-size: 16px;
     font-weight: 700;
     color: #c4d2dd;
     text-transform: uppercase;
+    margin-top: 27px;
+    margin-bottom: 20px;
+    letter-spacing: 3.5px;
+}
+.page-app-list {
+    padding: 0;
+    list-style-type: none;
+    margin-left: -7px;
+}
+.page-app-list>li {
+    display: inline-block;
+}
+.page-app-list>li>a {
+    display: block;
+    background: url("../img/app.png") no-repeat;
+    width: 185px;
+    height: 77px;
+}
+.page-app-list>li>a.page-app-android{
+    background-position: 0 0;
+}
+.page-app-list>li>a.page-app-ios{
+    background-position: -191px 0;
+}
+a.video-app {
+    position: absolute;
+    top: -61px;
+    right: -172px;
 }
 
 /*PAGE-ANALYTICS*/
-.page-analytics a {
-    font-size: 12px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #1085e4;
+.flex-analytics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-analytics>div {
+    flex-basis: 53%;
+}
+.page-analytics-text {
+    margin-bottom: 54px;
 }
 
+
 /*PAGE-ANALYTICS2*/
-.page-analytics2  a {
-    font-size: 12px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #1085e4;
+.flex-analytics2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-analytics2>div {
+    flex-basis: 55%;
+}
+.flex-analytics2 .settings-icon {
+    background-position: -20px 0;
+}
+.page-analytics2-text {
+    margin-bottom: 46px;
 }
 
 /*PAGE-SCREEN*/
@@ -570,7 +612,8 @@ h1 {
 
 /*PAGE*/
 .page-header {
-    background: url("../img/header-bg.png") no-repeat;
+    background-image: url("../img/header-bg.png");
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 53px 0 330px 0;
     position: relative;
@@ -599,12 +642,29 @@ h1 {
     background-size: cover;
     padding: 109px 0 156px 0;
     position: relative;
+    overflow: hidden;
 }
 .page-stat, .page-screen {
     background-color: #edf6ff;
 }
 .page-stat {
     padding: 116px 0 96px 0;
+}
+.page-app {
+    padding: 69px 0 82px 0;
+}
+.page-app .wrap {
+    position: relative;
+}
+.page-analytics {
+    background: url("../img/analytics-bg.png") no-repeat;
+    background-size: cover;
+    padding: 117px 0 137px 0;
+}
+.page-analytics2 {
+    background: url("../img/analytics2-bg.png") no-repeat;
+    background-size: cover;
+    padding: 120px 0 139px 0;
 }
 .page-screen, .page-plans {
     text-align: center;
