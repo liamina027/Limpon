@@ -78,13 +78,19 @@ h1 {
     margin: 0;
     margin-bottom: 25px;
 }
-.page-software .title-h2, .page-analytics .title-h2, .page-analytics2 .title-h2 {
+.page-software .title-h2, .page-analytics .title-h2, .page-control .title-h2 {
     max-width: 599px;
     margin-top: 12px;
     margin-bottom: 26px;
 }
 .page-app-content .title-h2 {
     margin-bottom: 36px;
+}
+.page-clients .title-40>span {
+    color: #85c8ff;
+}
+.page-clients .title-40 {
+    color: #fff;
 }
 
 .wrap {
@@ -271,7 +277,7 @@ h1 {
 }
 .grid-item {
     text-align: center;
-    box-shadow: 0 3px 7px #f4f4f4;
+    box-shadow: 0 9px 20px #f4f4f4;
     border-radius: 10px;
     padding: 40px 29px 64px;
 }
@@ -497,19 +503,19 @@ a.video-app {
 }
 
 
-/*PAGE-ANALYTICS2*/
-.flex-analytics2 {
+/*PAGE-CONTROL*/
+.flex-control {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.flex-analytics2>div {
+.flex-control>div {
     flex-basis: 55%;
 }
-.flex-analytics2 .settings-icon {
+.flex-control .settings-icon {
     background-position: -20px 0;
 }
-.page-analytics2-text {
+.page-control-text {
     margin-bottom: 46px;
 }
 
@@ -520,24 +526,47 @@ a.video-app {
 }
 
 /*PAGE-CLIENTS*/
-.page-clients p {
-    font-size: 14px;
-    line-height: 24px;
-    color: #8085b1;
+.box-clients {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 63px;
 }
-.page-clients .name {
+.box-clients-item {
+    background-color: #fff;
+    padding: 21px 42px;
+    border-radius: 10px;
+    flex-basis: 31.5%;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #8085b1;
+    box-shadow: 0 9px 20px #f4f4f4;
+}
+.box-clients-item>p {
+    margin-bottom: 4px;
+}
+.box-clients-item .name {
     font-size: 22px;
     font-weight: 600;
-    line-height: 26px;
     color: #000958;
+    letter-spacing: -0.6px;
+    line-height: 1.1;
+    margin-bottom: 0;
 }
-.page-clients .position {
+.box-clients-item .position {
     font-size: 14px;
     font-weight: 700;
-    line-height: 60px;
     color: #1085e4;
     text-transform: uppercase;
-    display: block;
+    letter-spacing: 3px;
+    margin-top: 0;
+}
+.box-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.box-info>div {
+    padding-left: 17px;
 }
 
 /*PAGE-PLANS*/
@@ -615,12 +644,14 @@ a.video-app {
     background-image: url("../img/header-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 53px 0 330px 0;
     position: relative;
 }
 .page-company {
     background: url("../img/company-bg.png") no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 106px 0 99px 0;
 }
 .page-grid {
@@ -640,6 +671,7 @@ a.video-app {
 .page-software {
     background: url("../img/software-bg.png") no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 109px 0 156px 0;
     position: relative;
     overflow: hidden;
@@ -649,9 +681,44 @@ a.video-app {
 }
 .page-stat {
     padding: 116px 0 96px 0;
+    position: relative;
+}
+.page-stat::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 601px;
+    height: 672px;
+    background: url("../img/square.png") no-repeat;
+    background-position: center;
+    top: -215px;
+    right: 0;
 }
 .page-app {
     padding: 69px 0 82px 0;
+    position: relative;
+}
+.page-app::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 704px;
+    height: 218px;
+    background: url("../img/intro.png") no-repeat;
+    background-position: center;
+    top: 50px;
+    left: 585px;
+}
+.page-app::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 445px;
+    height: 663px;
+    background: url("../img/circle.png") no-repeat;
+    background-position: center;
+    top: -400px;
+    left: 0;
 }
 .page-app .wrap {
     position: relative;
@@ -659,16 +726,38 @@ a.video-app {
 .page-analytics {
     background: url("../img/analytics-bg.png") no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 117px 0 137px 0;
 }
-.page-analytics2 {
-    background: url("../img/analytics2-bg.png") no-repeat;
+.page-control {
+    background: url("../img/control-bg.png") no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 120px 0 139px 0;
-}
-.page-screen, .page-plans {
-    text-align: center;
 }
 .page-screen {
     padding: 116px 0 0 0;
 }
+.page-screen, .page-plans {
+    text-align: center;
+}
+.page-clients {
+    position: relative;
+    padding: 43px 0 0 0;
+    margin-top: 120px;
+}
+.page-clients::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/clients-bg.svg") no-repeat;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.page-plans {
+    margin-top: 115px;
+}
+
