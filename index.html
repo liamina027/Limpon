@@ -176,6 +176,8 @@
                 <li><span>120</span>Awards</li>
             </ul>
         </div>
+        <div class="object-circle"></div>
+        <div class="object-square"></div>
     </div>
 
     <!--Блок 7-->
@@ -318,17 +320,41 @@
         <div class="wrap">
             <h2 class = "title-40"><span>angels</span>Our Team</h2>
             <div class="box-team">
-                <div>
-                    <p>founder</p>
-                    <p>Ricardo T. Obrien</p>
+                <div class="box-team-item">
+                    <img src="img/photo-1.png" alt="Ricardo" class="avatar">
+                    <p class="position">founder</p>
+                    <p class="name">Ricardo T. Obrien</p>
+                    <button type="button" class="btn-team btn-more btn-ricardo"><span></span></button>
+                    <ul class="social-team social-ricardo" style="display: none;">
+                        <li><a class="btn-team btn-fb" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-tw" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-be" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-web" href="" target="_blank"><span></span></a></li>
+                    </ul>
                 </div>
-                <div>
-                    <p>ceo</p>
-                    <p>Alberto Del Rio</p>
+                <div class="box-team-item">
+                    <img src="img/photo-2.png" alt="Alberto" class="avatar">
+                    <p class="position">ceo</p>
+                    <p class="name">Alberto Del Rio</p>
+                    <button type="button" class="btn-team btn-more btn-alberto"><span></span></button>
+                    <ul class="social-team social-alberto" style="display: none;">
+                        <li><a class="btn-team btn-fb" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-tw" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-be" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-web" href="" target="_blank"><span></span></a></li>
+                    </ul>
                 </div>
-                <div>
-                    <p>designer</p>
-                    <p>Thomas Alva Adison</p>
+                <div class="box-team-item">
+                    <img src="img/photo-3.png" alt="Thomas" class="avatar">
+                    <p class="position">designer</p>
+                    <p class="name">Thomas Alva Adison</p>
+                    <button type="button" class="btn-team btn-more btn-thomas"><span></span></button>
+                    <ul class="social-team social-thomas" style="display: none;">
+                        <li><a class="btn-team btn-fb" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-tw" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-be" href="" target="_blank"><span></span></a></li>
+                        <li><a class="btn-team btn-web" href="" target="_blank"><span></span></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -358,5 +384,22 @@
             </ul>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $(".btn-ricardo").click(function(){
+            $(".btn-ricardo").hide();
+            $(".social-ricardo").fadeIn();
+          });
+          $(".btn-alberto").click(function(){
+            $(".btn-alberto").hide();
+            $(".social-alberto").fadeIn();
+          });
+          $(".btn-thomas").click(function(){
+            $(".btn-thomas").hide();
+            $(".social-thomas").fadeIn();
+          });
+        });
+    </script>
 </body>
 </html>
