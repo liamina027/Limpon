@@ -809,16 +809,17 @@ a.video-app {
     padding: 69px 0 82px 0;
     position: relative;
 }
-.page-app::before {
-    content: "";
-    display: block;
+.page-app .intro{
     position: absolute;
-    width: 704px;
-    height: 218px;
-    background: url("../img/intro.png") no-repeat;
-    background-position: center;
-    top: 50px;
-    left: 585px;
+    font-size: 300px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.04);
+    line-height: 0;
+    left: 0;
+    right: 0;
+    top: 40px;
+    text-align: center;
+    margin: 0;
 }
 .object-circle {
     display: block;
