@@ -76,7 +76,6 @@ h1 {
 .page-subscribe .title-50 {
     color: #fff;
     margin: 0;
-    margin-bottom: 25px;
 }
 .page-software .title-h2, .page-analytics .title-h2, .page-control .title-h2 {
     max-width: 599px;
@@ -91,6 +90,10 @@ h1 {
 }
 .page-clients .title-40, .page-team .title-40 {
     color: #fff;
+}
+.page-form .title-h2 {
+    letter-spacing: -1.3px;
+    margin-bottom: 49px;
 }
 
 .wrap {
@@ -225,7 +228,26 @@ h1 {
 .box-team-item .btn-team:hover {
     background-color: #1a88e1;
 }
-
+.page-form .btn-primary {
+    max-width: 230px;
+    padding: 23px 40px 23px 61px;
+    position: relative;
+    letter-spacing: 2px;
+}
+.page-form .btn-primary::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 13px;
+    top: 22px;
+    left: 53px;
+    background-image: url("../img/paper-plane.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.page-form .btn-primary:hover::before {
+    background-position: -15px 0;
+}
 
 /*PAGE-HEADER*/
 .box-header {
@@ -414,6 +436,9 @@ h1 {
     font-size: 18px;
     color: #dfe8ff;
     width: 437px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 45px;
 }
 .box-subscribe-user{
     position: relative;
@@ -750,6 +775,114 @@ a.video-app {
     margin: 0;
 }
 
+/*PAGE-FORM*/
+.flex-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1090px;
+    margin: 0 auto;
+}
+.flex-form img {
+    margin-right: 60px;
+}
+.flex-form>div {
+    flex-basis: 47%;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 51px;
+}
+.contact-form input, .contact-form textarea {
+    font-size: 14px;
+    border: 2px solid #dce4ec;
+    border-radius: 35px;
+    padding: 25px 61px 25px 38px;
+    width: 85%;
+    box-sizing: border-box;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+}
+.contact-form textarea {
+    min-height: 159px;
+    margin-bottom: 13px;
+    resize: none;
+}
+.contact-form-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.contact-form-item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 129px;
+    background-repeat: no-repeat;
+}
+.contact-form-name::after {
+    background-image: url("../img/user.png");
+    width: 13px;
+    height: 15px;
+    top: 27px;
+}
+.contact-form-mail::after {
+    background-image: url("../img/envelope.png");
+    width: 14px;
+    height: 11px;
+    top: 29px;
+}
+.contact-form-text::after {
+    background-image: url("../img/pen.png");
+    width: 14px;
+    height: 15px;
+    top: 29px;
+}
+.contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder {color:#8995b3;}
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {color:#8995b3;}
+.contact-form input:-moz-placeholder, .contact-form textarea:-moz-placeholder {color:#8995b3;}
+.contact-form input:-ms-input-placeholder, .contact-form textarea:-ms-input-placeholder {color:#8995b3;}
+
+/*PAGE-FOOTER*/
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.copyright {
+    text-transform: uppercase;
+    color: #1085e4;
+}
+.social {
+    list-style-type: none;
+    display: flex;
+}
+.social-item {
+    background-image: url("../img/social.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 17px;
+    height: 16px;
+    padding-left: 17px;
+}
+.social-fb {
+    background-position: 0 0;
+}
+.social-tw {
+    background-position: -34px 0;
+}
+.social-be {
+    background-position:  -69px 0;
+}
+.social-p {
+    background-position: -104px 0;
+}
+.social-f {
+    background-position: -137px 0;
+}
+
 /*PAGE*/
 .page-header {
     background-image: url("../img/header-bg.png");
@@ -766,7 +899,7 @@ a.video-app {
     padding: 106px 0 99px 0;
 }
 .page-grid {
-    padding: 86px 0 107px;
+    padding: 86px 0 115px;
 }
 .page-subscribe {
     background: rgba(10,32,144,1);
@@ -777,13 +910,13 @@ a.video-app {
     background: -ms-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: linear-gradient(135deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
-    padding: 25px 0 28px 0;
+    padding: 52px 0 54px 0;
 }
 .page-software {
     background: url("../img/software-bg.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 109px 0 156px 0;
+    padding: 109px 0 163px 0;
     position: relative;
     overflow: hidden;
 }
@@ -839,13 +972,13 @@ a.video-app {
     background: url("../img/analytics-bg.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 117px 0 137px 0;
+    padding: 117px 0 128px 0;
 }
 .page-control {
     background: url("../img/control-bg.png") no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 120px 0 139px 0;
+    padding: 120px 0 138px 0;
 }
 .page-screen {
     padding: 116px 0 0 0;
@@ -870,12 +1003,22 @@ a.video-app {
     z-index: -1;
 }
 .page-plans {
-    padding: 81px 0 121px 0;
+    padding: 111px 0 0 0;
 }
 .page-team {
     background: url("../img/team-bg.png") no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 82px 0 20px 0;
+    padding: 77px 0 117px 0;
 }
-
+.page-form {
+    background-image: url("../img/form-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 72px 0 118px 0;
+}
+.page-footer {
+    background-color: #192b59;
+    padding: 7px 0;
+}
