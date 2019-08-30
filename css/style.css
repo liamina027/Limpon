@@ -621,11 +621,14 @@ h1 {
 .page-software .screen-img {
     display: block;
     background: url("../img/software-screen.png") no-repeat;
-    width: 931px;
+    background-size: contain;
+    background-position: bottom;
+    width: 48%;
     height: 810px;
     position: absolute;
-    left: -120px;
+    left: -2%;
     top: 116px;
+    z-index: -1;
 }
 .page-software-list::-webkit-scrollbar {width: 4px; height: 4px;}
 .page-software-list::-webkit-scrollbar-button {background-color: #1085e4;}
@@ -766,7 +769,8 @@ a.video-app {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 63px;
 }
 .box-clients-item {
@@ -899,7 +903,8 @@ a.video-app {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 140px;
 }
 .box-team-item {
@@ -960,6 +965,8 @@ a.video-app {
             align-items: center;
     max-width: 1090px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .flex-form img {
     margin-right: 60px;
@@ -1124,6 +1131,7 @@ a.video-app {
     padding: 109px 0 163px 0;
     position: relative;
     overflow: hidden;
+    z-index: -2;
 }
 .page-stat, .page-screen {
     background-color: #edf6ff;
@@ -1238,13 +1246,6 @@ a.video-app {
         top: 258px;
         background-size: cover;
     }
-    .page-software .screen-img {
-        width: 48%;
-        height: 609px;
-        background-size: cover;
-        top: 302px;
-        left: 0;
-    }
     a.video-app {
         right: 0;
         top: -23px;
@@ -1255,27 +1256,26 @@ a.video-app {
 }
 @media (max-width:1300px) {
     .page-software .screen-img {
-        width: 54%;
-        height: 609px;
-        background-size: cover;
-        top: 273px;
-        left: -32px;
+        display: none;
     }
-}
-@media (max-width:1200px) {
-    .page-software .screen-img {
-        width: 59%;
-        height: 609px;
-        background-size: cover;
-        top: 280px;
-        left: -100px;
+    .page-software-flex>div {
+            flex-basis: 100%;
+    }
+    .page-software-flex {
+        justify-content: center;
+    }
+    .page-software {
+        background-image: none;
+        padding: 60px 0;
+    }
+    .page-software-list {
+        height: 266px;
+        max-width: 800px;
+        margin-right: 50px;
     }
 }
 @media (max-width:1100px) {
-    .nav, .page-header .screen-img, .page-software .screen-img {
-        display: none;
-    }
-    .object-square, .object-circle, .page-app .intro {
+    .nav, .page-header .screen-img {
         display: none;
     }
     .btn-menu {
@@ -1298,17 +1298,28 @@ a.video-app {
     .page-grid {
         padding: 86px 0 70px;
     }
-    .page-software {
-        padding: 70px 0 60px 0;
-    }
     .page-stat {
         padding: 70px 0 50px 0;
     }
     .page-app {
-        padding: 69px 0 40px 0;
+        padding: 380px 0 40px 0;
     }
-}
-@media (max-width:1050px) {
+    .page-app-content{
+        width: 100%;
+        text-align: center;
+    }
+    a.video-app {
+        right: 0;
+        left: 0;
+        top: -359px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+    .video-app img {
+        width: 337px;
+        margin-left: 50px;
+    }
     .list-company-item {
         -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -1354,10 +1365,99 @@ a.video-app {
         max-width: 170px;
     }
 }
+@media (max-width: 950px) {
+    .object-square, .object-circle, .page-app .intro {
+        display: none;
+    }
+    .box-price {
+        margin: 32px auto 0;
+        max-width: 500px;
+    }
+    .box-price-item {
+        flex-basis: 100%;
+        margin: 0 auto 20px;
+    }
+    .page-analytics {
+        padding: 60px 0 90px 0;
+        background-image: none;
+    }
+    .flex-analytics>div {
+        flex-basis: 100%;
+    }
+    .flex-analytics img {
+        display: none;
+    }
+    .page-control {
+        padding: 60px 0 75px 0;
+        background-image: none;
+    }
+    .flex-control>div {
+        flex-basis: 100%;
+    }
+    .flex-control img {
+        display: none;
+    }
+    .page-form {
+        text-align: center;
+        margin: 0 auto;
+        padding: 65px 0 70px 0;
+    }
+    .flex-form>div {
+        flex-basis: 100%;
+    }
+    .flex-form img {
+        display: none;
+    }
+    .page-form .btn-primary {
+        margin: 0 auto;
+    }
+    .page-form .btn-primary::before {
+        left: 20%;
+    }
+    .page-team {
+        padding: 30px 0 0px 0;
+    }
+    .box-team-item {
+        flex-basis: 100%;
+        max-width: 400px;
+        margin: 0 auto 130px;
+    }
+    .page-clients {
+        padding: 43px 0 45px 0;
+        background-image: none;
+        background-color: #1085e4;
+    }
+    .page-clients .title-40 {
+        text-align: center;
+    }
+    .box-clients-item {
+        flex-basis: 100%;
+        max-width: 500px;
+        margin: 0 auto 20px;
+    }
+    .page-plans {
+        padding: 65px 0 0 0;
+    }
+}
+@media (max-width:700px) {
+    .list-stat>li {
+        margin-bottom: 30px;
+        flex-basis: 34%;
+    }
+}
 @media (max-width:600px) {
     h1 {
         font-size: 40px;
         margin: 0 auto 30px;
+    }
+    .grid {
+        grid-template-areas: 
+            "a" "c" "d" "b" "e" "f" "g" "h";
+            grid-template-columns: 1fr;
+    }
+    .grid-item {
+        max-width: 600px;
+        margin: 0 auto 20px;
     }
     .btn-primary {
         font-size: 11px;
@@ -1379,33 +1479,31 @@ a.video-app {
     .btn-group a {
         margin-bottom: 10px;
     }
-    a.video-app {
-        left: 0;
-        right: 0;
-        top: 131px;
-        text-align: center;
+    .social {
+        margin: 0 auto;
+        padding-right: 40px;
     }
-    .video-app img {
-        width: 230px;
+    .page-footer p {
+        margin: 0 auto 20px;
     }
-    .page-app-content {
-        width: 100%;
+    .list-stat {
+        justify-content: space-between;
+        padding: 0;
     }
-    .page-app-content p:nth-child(2) {
-        padding-top: 200px;
+    .modal {
+        max-width: 300px;
     }
-    .page-app-list, .page-app-text {
-        text-align: center;
+    .list-company-item {
+        margin: 0 auto 50px;
     }
-    .box-price {
-        margin-top: 32px;
+    .contact-form-item::after {
+        right: 15%;
     }
-    .box-price-item {
-        flex-basis: 49%;
-        margin: 0 auto 30px;
+    .page-screen {
+        padding: 60px 0 0 0;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 450px) {
     .title-40 {
         font-size: 25px;
     }
@@ -1416,65 +1514,47 @@ a.video-app {
     .title-h2 {
         line-height: 40px;
     }
-    .list-company-item {
-        margin: 0 auto 50px;
-    }
-    .grid {
-        grid-template-areas: 
-            "a" "c" "d" "b" "e" "f" "g" "h";
-            grid-template-columns: 1fr;
-    }
+    .page-subscribe {
+        padding: 50px 0 100px 0;    
+    }    
     .box-subscribe-text {
         width: 275px;
     }
     .box-subscribe-user input {
         font-size: 11px;
-        padding: 25px 102px 25px 37px;
+        padding: 25px 10px 25px 37px;
     }
     .box-subscribe-user .btn-primary {
-        padding: 11px 12px;
-        top: 17px;
+        top: 76px;
+        right: 0;
+        left: 0;
+        margin: 10px auto 0;
     }
     .btn-primary {
         font-size: 8px;
-    }
-    .page-software-flex {
-        justify-content: center;
     }
     .settings-icon {
         background-size: 70%;
         height: 64px;
         background-position: -15px 0;
     }
-    .page-stat {
-        padding: 70px 0 1px 0;
-    }
-    .list-stat {
-        justify-content: space-between;
-        padding: 0;
-    }
-    .list-stat>li {
-        margin-bottom: 65px;
-    }
-    a.video-app {
-        left: 0;
-        right: 0;
-        top: 101px;
-        text-align: center;
+    .page-footer p {
+        font-size: 12px;
     }
     .video-app img {
-        width: 170px;
+        width: 235px;
+        margin-left: 4px;
     }
-    .box-price {
-        margin-top: 32px;
+    .page-app {
+        padding: 280px 0 40px 0;
     }
-    .box-price-item {
-        flex-basis: 100%;
+    .page-app-list>li {
+        margin-left: 29px;
     }
-    .social {
-        margin-left: 25px;
+    .page-app-list>li>a.page-app-ios {
+        margin-left: 8px;
     }
-    .page-footer p {
-        text-align: center;
+    a.video-app {
+        top: -250px;
     }
 }
